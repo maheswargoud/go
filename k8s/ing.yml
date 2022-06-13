@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-go
+  namespace: ns-go
+spec:
+  rules:
+  - host: go.maheswargoud.xyz
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: svc-go
+            port: 
+              number: 80

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-go
+  namespace: ns-go
+spec:
+  selector:
+    app: dept-go
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
